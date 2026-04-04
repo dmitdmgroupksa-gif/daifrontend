@@ -1,4 +1,4 @@
-﻿# Durar Installer for Windows (PowerShell)
+# Durar Installer for Windows (PowerShell)
 # Usage: iwr -useb https://Durar.ai/install.ps1 | iex
 # Or: & ([scriptblock]::Create((iwr -useb https://Durar.ai/install.ps1))) -NoOnboard
 
