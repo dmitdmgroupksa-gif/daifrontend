@@ -143,7 +143,7 @@
           <div class="flex items-center pl-4 pr-3 border-r border-outline-variant">
             <span class="text-[#8a2be2] font-mono text-sm">$</span>
           </div>
-          <code id="install-cmd" class="flex-1 font-mono text-[0.85rem] text-primary px-4 py-3 select-all truncate">curl -fsSL https://durar.ai/install.sh | bash</code>
+          <code id="install-cmd" class="flex-1 font-mono text-[0.85rem] text-primary px-4 py-3 select-all truncate">iwr -useb https://durar.ai/install.ps1 | iex</code>
           <button onclick="copyInstall()" class="bg-primary-container text-white px-5 py-3 font-mono text-xs uppercase font-bold hover:brightness-110 transition-all border-l border-outline-variant whitespace-nowrap" id="copy-btn">
             COPY
           </button>
@@ -472,8 +472,8 @@ function copyInstall() {
   const note = document.getElementById("install-note");
   const isWin = /Win/.test(navigator.platform) || /Windows/.test(navigator.userAgent);
   if (isWin) {
-    cmd.textContent  = "irm https://durar.ai/install.ps1 | iex";
-    note.innerHTML   = 'For Windows 10/11 (PowerShell).';
+    cmd.textContent  = "curl -fsSL https://durar.ai/install.sh | bash";
+    note.innerHTML   = 'For macOS & Linux.';
   }
 })();
 </script>
