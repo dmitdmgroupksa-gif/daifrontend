@@ -471,7 +471,7 @@ function copyInstall() {
   const cmd  = document.getElementById("install-cmd");
   const note = document.getElementById("install-note");
   const isWin = /Win/.test(navigator.platform) || /Windows/.test(navigator.userAgent);
-  if (isWin) {
+  if (!isWin) {
     cmd.textContent  = "curl -fsSL https://durar.ai/install.sh | bash";
     note.innerHTML   = 'For macOS & Linux.';
   }
